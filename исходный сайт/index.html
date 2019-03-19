@@ -1,0 +1,136 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+		<link rel="manifest" href="images/favicon/manifest.json">
+
+		<title>wnfcraft - snake smyslov</title>
+
+		<meta name="msapplication-TileColor" content="#e61919">
+		<meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+		<meta name="viewport" content="height=device-height,width=device-width" />
+
+		<meta name="theme-color" content="#e61919"> <!-- Chrome, Firefox OS and Opera -->
+		<meta name="msapplication-navbutton-color" content="#e61919"> <!-- Windows Phone -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="#e61919"> <!-- iOS Safari -->
+
+		<link rel="stylesheet" type="text/css" href="css/fonts.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/adaptive.css" />
+
+		<script src="js/vue.min.js"></script>
+	</head>
+	<body>
+
+		<div id="application" @mousemove="move" v-bind:class="{ keyboard: isActive }">
+			
+			<div class="background">
+				<img src="images/background-images/item_01.png">
+				<img src="images/background-images/item_02.png">
+				<img src="images/background-images/item_03.png">
+				<img src="images/background-images/item_04.png">
+				<img src="images/background-images/item_05.png">
+				<img src="images/background-images/item_06.png">
+			</div>
+
+			<transition name="fade">
+				<div v-if="preloader" class="preloader">
+					<span class="logo-preloader"></span>
+				</div>
+			</transition>
+
+			<div class="content" >
+				<div class="logo">
+					<img src="images/logo.svg">
+				</div>
+
+				<div class="adaptive">
+					<div class="left-block" v-on:click="hideKeyboard()">
+						<div class="item">
+							<a>We are</a>
+							<img src="images/superman.png">
+							<a>Coming</a>
+						</div>
+						<div class="links">
+							<a href="https://www.instagram.com/wnfcraft/" target="_blank">
+								<div class="icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="17px" height="17px"><g><g><path id="instagram" d="M352,0H160C71.648,0,0,71.648,0,160v192c0,88.352,71.648,160,160,160h192c88.352,0,160-71.648,160-160V160    C512,71.648,440.352,0,352,0z M464,352c0,61.76-50.24,112-112,112H160c-61.76,0-112-50.24-112-112V160C48,98.24,98.24,48,160,48    h192c61.76,0,112,50.24,112,112V352z" fill="#FFFFFF"/></g></g><g><g><path id="instagram" d="M256,128c-70.688,0-128,57.312-128,128s57.312,128,128,128s128-57.312,128-128S326.688,128,256,128z M256,336    c-44.096,0-80-35.904-80-80c0-44.128,35.904-80,80-80s80,35.872,80,80C336,300.096,300.096,336,256,336z" fill="#FFFFFF"/></g></g><g><g><circle cx="393.6" cy="118.4" r="17.056" fill="#FFFFFF"/></g></g></svg></div>
+							</a>
+							<a href="http://facebook.com/wnfcraft" target="_blank">
+								<div class="icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="17px" height="17px"><g><g><path id="facebook" d="M288,176v-64c0-17.664,14.336-32,32-32h32V0h-64c-53.024,0-96,42.976-96,96v80h-64v80h64v256h96V256h64l32-80H288z" fill="#FFFFFF"/></g></g></svg></div>
+							</a>
+							<a href="https://www.amazon.com/s?ie=UTF8&me=A2HWA3JOIZHN1A&page=1" target="_blank">
+								<div class="icon noborder"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 42.21 42.21" style="enable-background:new 0 0 42.21 42.21;" xml:space="preserve" height="40px"><g><g><path id="amazon" d="M15.658,15.542c-0.366-0.507-0.965-0.733-1.511-0.733c-0.771,0-1.489,0.395-1.806,1.242    c-0.366-0.846-0.878-1.242-1.695-1.242c-0.805,0-1.402,0.395-1.721,1.242H8.903v-0.876c-0.008-0.121-0.11-0.219-0.237-0.224H7.448    c-0.139,0-0.252,0.107-0.252,0.241v6.704c0.009,0.12,0.109,0.213,0.234,0.221h1.307c0.139,0,0.251-0.109,0.251-0.242V18.32    c0-0.775-0.038-1.848,0.9-1.848c0.928,0,0.807,1.1,0.807,1.848v3.554c0,0.129,0.104,0.232,0.236,0.242h1.304    c0.141,0,0.252-0.109,0.252-0.242V18.32c0-0.381-0.012-0.947,0.121-1.285c0.134-0.338,0.465-0.549,0.781-0.549    c0.379,0,0.671,0.127,0.768,0.577c0.062,0.269,0.037,0.974,0.037,1.257v3.554c0,0.129,0.105,0.232,0.235,0.242h1.305    c0.139,0,0.251-0.109,0.251-0.242l0.002-4.23C15.987,16.925,16.071,16.106,15.658,15.542z" fill="#FFFFFF"/></g></g><g><g><path id="amazon" d="M32.876,14.81c-1.89,0-2.938,1.623-2.938,3.709c0,2.074,1.035,3.738,2.938,3.738c1.828,0,2.987-1.622,2.987-3.667    C35.868,16.474,34.816,14.81,32.876,14.81z M32.876,20.875c-1.024,0-1.013-1.749-1.013-2.568c0-0.817,0.062-2.129,1.023-2.129    c0.414,0,0.709,0.182,0.854,0.649c0.172,0.536,0.196,1.212,0.196,1.778C33.94,19.465,33.891,20.875,32.876,20.875z" fill="#FFFFFF"/></g></g><g><g><path id="amazon" d="M23.3,20.891c-0.238-0.332-0.49-0.6-0.49-1.211v-2.036c0-0.861,0.059-1.653-0.576-2.247    c-0.501-0.481-1.332-0.65-1.967-0.65c-1.242,0-2.631,0.463-2.921,1.999c-0.031,0.164,0.087,0.25,0.194,0.274l1.266,0.136    c0.118-0.005,0.205-0.121,0.228-0.239c0.107-0.529,0.552-0.784,1.05-0.784c0.269,0,0.574,0.099,0.731,0.34    c0.185,0.268,0.16,0.636,0.16,0.946l-0.001,0.166c-0.757,0.087-1.747,0.142-2.456,0.454c-0.819,0.353-1.392,1.075-1.392,2.135    c0,1.357,0.854,2.036,1.953,2.036c0.928,0,1.438-0.219,2.154-0.95c0.236,0.344,0.315,0.512,0.749,0.872    c0.099,0.052,0.224,0.046,0.31-0.03l0.002,0.002c0.261-0.23,0.734-0.645,1-0.867C23.399,21.15,23.384,21.008,23.3,20.891z     M20.974,18.916c0,0.509,0.014,0.933-0.245,1.385c-0.206,0.368-0.537,0.593-0.901,0.593c-0.503,0-0.797-0.381-0.797-0.946    c0-1.113,0.998-1.315,1.943-1.315V18.916z" fill="#FFFFFF"/>	</g></g><g><g></g><path id="amazon"d="M41.868,15.599c-0.367-0.578-0.942-0.79-1.527-0.791c-0.901,0-1.416,0.437-1.78,1.354H38.54v-1.025    c-0.025-0.105-0.121-0.183-0.234-0.188h-1.211c-0.133,0-0.24,0.096-0.252,0.219l0.002,6.706c0,0.129,0.103,0.234,0.236,0.244    h1.299c0.141,0,0.254-0.109,0.256-0.244v-3.608c0-0.453,0.023-0.86,0.209-1.27c0.145-0.323,0.436-0.536,0.756-0.536    c0.9,0,0.814,1.073,0.814,1.806v3.641c0.01,0.113,0.113,0.201,0.23,0.212h1.311c0.131,0,0.236-0.095,0.254-0.212v-4.22    C42.21,17.038,42.21,16.137,41.868,15.599z" fill="#FFFFFF"/></g></g><g><g><path id="amazon" d="M29.081,20.302c-0.75-0.422-1.621-0.546-2.449-0.525l2.228-3.176c0.205-0.286,0.322-0.465,0.322-0.603v-0.821    c0-0.144-0.109-0.243-0.248-0.243h-4.293c-0.134,0-0.242,0.097-0.242,0.243v0.959c0,0.143,0.108,0.241,0.248,0.241h2.244    l-2.578,3.696c-0.156,0.237-0.158,0.503-0.158,0.659v0.973c0,0.14,0.159,0.301,0.307,0.219c1.461-0.775,3.213-0.698,4.533-0.006    c0.164,0.084,0.316-0.08,0.316-0.22v-1.024C29.296,20.537,29.251,20.396,29.081,20.302z" fill="#FFFFFF"/></g></g><g><g><path id="amazon" d="M28.251,22.729c-0.267-0.331-2.567-0.616-3.97,0.369c-0.214,0.151-0.179,0.36,0.062,0.332    c0.789-0.093,2.549-0.304,2.861,0.096c0.313,0.401-0.349,2.057-0.646,2.795c-0.091,0.224,0.103,0.314,0.305,0.146    C28.182,25.369,28.52,23.063,28.251,22.729z" fill="#FFFFFF"/></g></g><g><g><path id="amazon" d="M25.831,24.117c-2.748,1.167-5.737,1.729-8.457,1.729c-4.027,0-7.93-1.103-11.083-2.939    c-0.275-0.162-0.48,0.121-0.251,0.328c2.923,2.641,6.786,4.229,11.077,4.229c3.062,0,6.615-0.963,9.069-2.771    C26.591,24.393,26.246,23.943,25.831,24.117z" fill="#FFFFFF"/>	</g></g><g><g><path id="amazon" d="M6.175,20.891c-0.239-0.332-0.492-0.6-0.492-1.211v-2.036c0-0.861,0.061-1.653-0.574-2.247    c-0.502-0.481-1.332-0.65-1.969-0.65c-1.242,0-2.628,0.463-2.921,1.999c-0.03,0.164,0.09,0.25,0.194,0.274l1.27,0.136    c0.116-0.005,0.203-0.121,0.226-0.239c0.107-0.529,0.553-0.784,1.051-0.784c0.268,0,0.572,0.099,0.732,0.34    c0.182,0.268,0.157,0.636,0.157,0.946v0.168c-0.756,0.088-1.746,0.143-2.456,0.455C0.577,18.393,0,19.115,0,20.175    c0,1.357,0.856,2.036,1.955,2.036c0.93,0,1.438-0.219,2.154-0.95c0.237,0.344,0.315,0.512,0.749,0.872    c0.098,0.052,0.222,0.046,0.309-0.03l0.004,0.002c0.26-0.23,0.733-0.645,1.001-0.867C6.278,21.148,6.26,21.008,6.175,20.891z     M3.849,18.916c0,0.509,0.014,0.933-0.244,1.385c-0.207,0.368-0.536,0.593-0.904,0.593c-0.501,0-0.792-0.381-0.792-0.946    c0-1.113,0.997-1.315,1.94-1.315V18.916z" fill="#FFFFFF"/></g></g></svg></div>
+							</a>
+						</div>
+					</div>
+				
+					<div class="purchase" key="edit">
+						<transition name="slide-fade">
+							<div v-if="show=='enter'">
+								<div class="enter-info">
+									<div class="top-block">
+										<div class="discount">
+											<div class="discount-block"><a>25%</a></div>
+											<a>discount</a>
+										</div>
+										<a class="discount-descr">For a subscription to our news.</a>
+
+										<div class="form-block">
+											<input v-on:keyup.enter="sendCoupon()" @focus="onInputFocus" @blur="onInputBlur"id="user-email" name="user-email" type="text" maxlength="28" required="required" spellcheck="false">
+											<a>email</a>
+										</div>
+
+									</div>
+									<div class="subscribe">
+										<div @click="show = 'verify'" class="subscribe-button"><a>Subscribe</a></div>
+									</div>
+								</div>
+							</div>
+						</transition>
+						<transition name="slide-fade">
+							<div v-if="show=='verify'">
+								<div class="verify-info">
+									<a>Thanks for subscribe</a>
+									<img src="images/verification.png">
+									<a>We sent a gift code to your email address.</a>
+								</div>
+							</div>
+						</transition>
+
+						<transition name="slide-fade">
+							<div v-if="show=='coupon'">
+								<div class="coupon-info">
+									<div class="top-block">
+										<a>Excellent</a>
+										<a>Here’s your discount coupon.</a>
+									</div>
+									<div class="coupon-discount">
+										<a>25%</a>
+									</div>
+									<div class="coupon-button" v-on:click="copyCoupon">
+										<a>{{ coupon }}</a>
+									</div>
+									<a>Now you’re the first to know about all our special offers and new incoming products.</a>
+								</div>
+							</div>
+						</transition>
+					</div>		
+				</div>
+			</div>
+		</div>
+		<script src="js/application.js"></script>
+	</body>
+</html>
