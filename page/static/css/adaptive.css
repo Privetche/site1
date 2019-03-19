@@ -1,0 +1,177 @@
+﻿@media screen and (min-width: 961px) and (max-width: 1024px) {
+
+    .content {
+        max-width: 931px;
+    }
+
+    .item {
+         top: 52%;
+    }
+
+    .item img {
+        width: 249px;
+        top: -5%;
+    }
+
+    .item a:first-child {
+        font-size: 70px;
+    }
+
+    .item a:last-child {
+        font-size: 200px;
+		position: relative;
+		top: 10px;
+		z-index: -1;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 960px) {
+
+    .content {
+        max-width: 690px;
+    }
+
+    .item {
+		top: 53.4%;
+    }
+
+    .item img {
+        width: 184px;
+        top: 10%;
+    }
+
+    .item a:first-child {
+        font-size: 51px;
+        top: 68px;
+    }
+
+    .item a:last-child {
+        font-size: 146px;
+		position: relative;
+		top: 10px;
+		z-index: -1;
+    }
+
+    .coupon-discount {
+        right: 50px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    .content {
+        max-width: 511px;
+    }
+
+    .logo a {
+        display: none;
+    }
+
+    .verify-info img {
+        padding-left: 110px;
+    }
+
+    .adaptive {
+        position: relative;
+        max-width: 240px;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .item img {
+        width: 134px;
+        top: 20%;
+    }
+
+    .item a:first-child {
+        font-size: 37px;
+        top: 80px;
+    }
+
+    .item a:last-child {
+        font-size: 106px;
+		position: relative;
+		top: 10px;
+		z-index: -1;
+    }
+
+    .item {
+		top: 4%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+
+    .purchase {
+        top: 400px;
+        margin-left: -40px;
+        transform: none;
+        left: auto;
+    }
+
+    .enter-info > .top-block {
+        padding-left: 40px;
+    }
+
+    .links {
+        top: 670px;
+        padding: 0px;
+        margin-left: -40px;
+        margin-bottom: 30px;
+        padding-left: 30px;
+    }
+
+    .keyboard .links {
+        margin-bottom: 150px;
+    }
+
+    .form-block {
+        width: 245px;
+    }
+
+    .coupon-info {
+        width: 105%;
+        margin-top: 65px;
+        padding-left: 40px;
+    }
+
+    .coupon-discount {
+        right: -100px;
+    }
+
+    .coupon-discount a {
+        top: 41px;
+        right: 90px;
+        font-size: 80px;
+    }
+
+    .verify-info {
+        width: 100%;
+        padding-left: 40px;
+    }
+
+    .verify-info a:first-child {
+        line-height: 40px;
+        padding-bottom: 20px;
+    }
+
+    .background {
+        position: absolute;
+        height: auto;
+    }
+
+    .background img:nth-child(4n) {
+        top: 60px;left: 26%;
+    }
+    .background img:nth-child(5n) {
+        top: 30px; left: 2%;
+    }
+    .background img:nth-child(6n) {
+        top: 0%;left: 10%;
+    }
+
+    .background img {
+        width: 15%;
+    }
+}
